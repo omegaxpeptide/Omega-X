@@ -85,8 +85,8 @@
   </footer>
 
   <div id="cartPanel" class="panel hidden">
-    <div class="panel-box">
-      <button class="close" onclick="closeCart()">×</button>
+    <div class="panel-box cart-modal">
+      <button class="close" onclick="closeCart()" aria-label="Close cart">×</button>
       <h2>Your Cart</h2>
       <div id="cartItems"></div>
       <div class="cart-total">Total: <span id="cartTotal">$0.00</span></div>
@@ -98,7 +98,7 @@
 
   <div id="authPanel" class="panel hidden">
     <div class="panel-box small">
-      <button class="close" onclick="closeAuth()">×</button>
+      <button class="close" onclick="closeAuth()" aria-label="Close login">×</button>
       <h2>Research Account</h2>
       <input type="email" placeholder="Email address" />
       <input type="password" placeholder="Password" />

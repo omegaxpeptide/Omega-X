@@ -18,12 +18,13 @@ const products = [
 let cart = [];
 
 function money(n){ return `$${n.toFixed(2)}`; }
+function setScrollLock(isLocked){ document.body.classList.toggle('no-scroll', isLocked); }
 function renderProducts(){
   const grid = document.getElementById('productGrid');
   const q = (document.getElementById('search')?.value || '').toLowerCase();
   grid.innerHTML = products.filter(p => `${p.name} ${p.strength}`.toLowerCase().includes(q)).map((p, i) => `
     <article class="product-card">
-      <div class="mock"><img src="assets/logo.png" alt="OMEGA X mark"></div>
+      <div class="mock"><img src="assets/logo.png" alt="OMEGA X mark" onerror="this.style.display='none'"></div>
       <h3>${p.name}</h3>
       <div class="meta">${p.strength} • Research Use Only</div>
       <div class="price">${money(p.price)}</div>
@@ -40,13 +41,16 @@ function updateCart(){
   document.getElementById('cartTotal').textContent = money(cart.reduce((s,p)=>s+p.price,0));
 }
 function removeItem(i){ cart.splice(i,1); updateCart(); }
-function openCart(){ document.getElementById('cartPanel').classList.remove('hidden'); updateCart(); }
-function closeCart(){ document.getElementById('cartPanel').classList.add('hidden'); }
-function openAuth(){ document.getElementById('authPanel').classList.remove('hidden'); }
-function closeAuth(){ document.getElementById('authPanel').classList.add('hidden'); }
+function openCart(){ document.getElementById('cartPanel').classList.remove('hidden'); setScrollLock(true); updateCart(); }
+function closeCart(){ document.getElementById('cartPanel').classList.add('hidden'); setScrollLock(false); }
+function openAuth(){ document.getElementById('authPanel').classList.remove('hidden'); setScrollLock(true); }
+function closeAuth(){ document.getElementById('authPanel').classList.add('hidden'); setScrollLock(false); }
 function checkout(){
   if(!cart.length){ alert('Your cart is empty.'); return; }
   if(!document.getElementById('ruoCheck').checked){ alert('Please confirm the research-use-only acknowledgment before checkout.'); return; }
   alert('Checkout placeholder ready. Next step: connect an approved payment gateway.');
 }
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') { closeCart(); closeAuth(); }
+});
 renderProducts();
