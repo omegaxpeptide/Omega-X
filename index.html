@@ -5,40 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OMEGA X PEPTIDE | Research Catalog</title>
   <meta name="description" content="OMEGA X PEPTIDE research catalog. Research use only. Not for human or veterinary use." />
+  <meta name="theme-color" content="#0a0a0b" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="topbar">
-    <span>RESEARCH USE ONLY</span><span>NOT FOR HUMAN OR VETERINARY USE</span><span>SECURE DOMESTIC FULFILLMENT</span>
+    <span><i class="dot"></i> Research Use Only</span>
+    <span>Not For Human Or Veterinary Use</span>
   </div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="OMEGA X PEPTIDE home">
-      <img src="assets/logo.png" alt="OMEGA X PEPTIDE logo" />
-      <div><strong>OMEGA X</strong><small>PEPTIDE</small></div>
+      <img src="logo.png" alt="OMEGA X PEPTIDE logo" />
+      <div class="brand-text"><strong>OMEGA X</strong><small>PEPTIDE</small></div>
     </a>
     <nav class="desktop-nav">
       <a href="#catalog">Catalog</a>
       <a href="#testing">Testing</a>
-      <a href="#process">How it works</a>
+      <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
-      <a href="terms.html">Terms</a>
     </nav>
     <div class="header-actions">
       <button class="ghost" id="loginBtn">Login</button>
       <button class="cart-pill" id="openCart">Cart <span id="cartCount">0</span></button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <aside class="mobile-menu" id="mobileMenu">
-    <button class="close-menu" id="closeMenu">×</button>
+    <button class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
     <a href="#catalog">Catalog</a>
     <a href="#testing">Testing</a>
-    <a href="#process">How it works</a>
+    <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
     <a href="terms.html">Terms</a>
     <button class="redline" id="mobileCart">Open Cart</button>
@@ -48,40 +49,68 @@
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="hero-copy">
-        <p class="eyebrow">Independent research supply</p>
-        <h1>Research peptides with a cleaner, faster catalog experience.</h1>
-        <p class="subhead">Browse OMEGA X PEPTIDE products, review research-use details, and build your cart with a polished, mobile-first checkout flow.</p>
+        <p class="eyebrow">Independent Research Supply</p>
+        <h1>Research peptides, sourced and documented for serious work.</h1>
+        <p class="subhead">A clean catalog, batch-level documentation, and a checkout flow built for laboratory researchers — not the consumer market.</p>
         <div class="hero-buttons">
-          <a class="primary" href="#catalog">Shop Catalog</a>
-          <a class="secondary" href="#testing">View Testing</a>
+          <a class="primary" href="#catalog">Browse Catalog</a>
+          <a class="secondary" href="#testing">Testing &amp; COAs</a>
         </div>
       </div>
       <div class="hero-card">
-        <div class="vial-stack">
-          <div class="vial vial-back"></div>
-          <div class="vial vial-front"><img src="assets/logo.png" alt="" /></div>
-          <div class="vial vial-side"></div>
+        <div class="hero-card-inner">
+          <div class="product-mark">
+            <img src="logo.png" alt="" />
+          </div>
         </div>
-        <div class="card-footer"><span>OMEGA X</span><small>Batch documentation available when uploaded</small></div>
+        <div class="hero-card-footer">
+          <span>OMEGA X</span>
+          <small>Batch documentation available when uploaded.</small>
+        </div>
       </div>
     </section>
 
     <section class="trust-row" aria-label="Store highlights">
-      <div><span>01</span><strong>Research Use Only</strong><small>Not for human or veterinary use.</small></div>
-      <div><span>02</span><strong>Clean Catalog</strong><small>Fast browsing on mobile and desktop.</small></div>
-      <div><span>03</span><strong>Testing Focused</strong><small>COA/documentation sections ready.</small></div>
-      <div><span>04</span><strong>Secure Checkout</strong><small>Payment gateway can be connected later.</small></div>
+      <div>
+        <span class="num">01</span>
+        <strong>Research Use Only</strong>
+        <small>Not for human or veterinary consumption.</small>
+      </div>
+      <div>
+        <span class="num">02</span>
+        <strong>Clean Catalog</strong>
+        <small>Mobile and desktop browsing, no clutter.</small>
+      </div>
+      <div>
+        <span class="num">03</span>
+        <strong>Documentation Ready</strong>
+        <small>COA / batch fields wired into every product.</small>
+      </div>
+      <div>
+        <span class="num">04</span>
+        <strong>Secure Checkout</strong>
+        <small>Approved processor connects when you're ready.</small>
+      </div>
     </section>
 
     <section class="intro-panel">
-      <div><p class="eyebrow red">Compliance Notice</p><h2>Built for qualified laboratory research purchasing.</h2></div>
-      <p>Products listed on this website are offered for laboratory research use only. They are not drugs, foods, cosmetics, or dietary supplements, and are not intended to diagnose, treat, cure, or prevent disease.</p>
+      <div>
+        <p class="eyebrow red">Compliance Notice</p>
+        <h2>Built for qualified laboratory research purchasing.</h2>
+      </div>
+      <p>Products listed on this website are offered for laboratory research use only. They are not drugs, foods, cosmetics, or dietary supplements, and are not intended to diagnose, treat, cure, or prevent disease. By browsing or purchasing, you confirm you are a qualified researcher.</p>
     </section>
 
     <section class="catalog-section" id="catalog">
       <div class="section-head">
-        <div><p class="eyebrow">Public catalog</p><h2>Research Catalog</h2></div>
-        <div class="catalog-tools"><input id="search" type="search" placeholder="Search catalog..." /><button id="openCart2">Cart <span id="cartCount2">0</span></button></div>
+        <div>
+          <p class="eyebrow">Public Catalog</p>
+          <h2>Research Catalog</h2>
+        </div>
+        <div class="catalog-tools">
+          <input id="search" type="search" placeholder="Search catalog..." />
+          <button id="openCart2">Cart <span id="cartCount2">0</span></button>
+        </div>
       </div>
       <div class="product-grid" id="productGrid"></div>
     </section>
@@ -89,45 +118,89 @@
     <section class="split" id="testing">
       <div class="panel rich">
         <p class="eyebrow red">COA / Testing</p>
-        <h2>Quality documentation section ready for your batches.</h2>
-        <p>Upload COAs, purity reports, batch IDs, and handling notes as your final testing documents become available.</p>
+        <h2>Quality documentation, ready for your batches.</h2>
+        <p>Upload COAs, purity reports, batch IDs, and handling notes as your final testing documents become available. Every product page is wired for documentation drop-in.</p>
       </div>
       <div class="testing-list">
         <div><strong>Batch ID</strong><span>Coming soon</span></div>
         <div><strong>Purity / Assay</strong><span>COA upload ready</span></div>
-        <div><strong>Storage Notes</strong><span>Product-specific fields</span></div>
+        <div><strong>Storage Notes</strong><span>Per-product fields</span></div>
+        <div><strong>Manufacture Date</strong><span>Per-batch metadata</span></div>
       </div>
     </section>
 
     <section class="process" id="process">
-      <p class="eyebrow">How it works</p><h2>Simple ordering flow.</h2>
+      <p class="eyebrow">How It Works</p>
+      <h2>Simple ordering flow.</h2>
       <div class="steps">
-        <div><b>1</b><h3>Browse</h3><p>Review product sizes and details in the public catalog.</p></div>
-        <div><b>2</b><h3>Add to cart</h3><p>Build an order with clean mobile cart controls.</p></div>
-        <div><b>3</b><h3>Checkout</h3><p>Connect an approved payment gateway when ready.</p></div>
+        <div>
+          <b>1</b>
+          <h3>Browse</h3>
+          <p>Review product sizes and details in the public catalog.</p>
+        </div>
+        <div>
+          <b>2</b>
+          <h3>Add to Cart</h3>
+          <p>Build an order with clean cart controls on mobile or desktop.</p>
+        </div>
+        <div>
+          <b>3</b>
+          <h3>Checkout</h3>
+          <p>Secure payment when an approved processor is connected.</p>
+        </div>
       </div>
     </section>
 
     <section class="faq" id="faq">
-      <p class="eyebrow">FAQ</p><h2>Common questions</h2>
-      <details open><summary>Are these products for human use?</summary><p>No. Products are listed for laboratory research use only and are not for human or veterinary use.</p></details>
-      <details><summary>Are prices final?</summary><p>Current prices are placeholders and can be replaced when your final pricing is ready.</p></details>
-      <details><summary>Can the logo be changed later?</summary><p>Yes. Replace <code>assets/logo.png</code> and the whole site updates.</p></details>
+      <p class="eyebrow">Frequently Asked</p>
+      <h2>Common questions</h2>
+      <details open>
+        <summary>Are these products for human use?</summary>
+        <p>No. Products are listed for laboratory research use only and are not for human or veterinary use.</p>
+      </details>
+      <details>
+        <summary>Are prices final?</summary>
+        <p>Current prices are placeholders and can be replaced when final pricing is ready.</p>
+      </details>
+      <details>
+        <summary>How do I view a Certificate of Analysis?</summary>
+        <p>COA documentation will be available per product as testing reports are uploaded for each batch.</p>
+      </details>
+      <details>
+        <summary>Can the logo be changed later?</summary>
+        <p>Yes. Replace <code>logo.png</code> in the repository root and the whole site updates.</p>
+      </details>
     </section>
   </main>
 
   <footer>
-    <div><strong>OMEGA X PEPTIDE</strong><p>Support@omegaxpeptide.com</p></div>
-    <nav><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refund / Shipping</a></nav>
-    <p class="fineprint">Research use only. Not for human or veterinary use. Not for consumption or injection. Not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <div>
+      <strong>OMEGA X PEPTIDE</strong>
+      <p>support@omegaxpeptide.com</p>
+    </div>
+    <nav>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund / Shipping</a>
+    </nav>
+    <p class="fineprint">Research use only. Not for human or veterinary use. Not for consumption or injection. Not intended to diagnose, treat, cure, or prevent any disease. © OMEGA X PEPTIDE.</p>
   </footer>
 
   <div class="modal-backdrop" id="cartBackdrop" aria-hidden="true">
     <aside class="cart-drawer" role="dialog" aria-label="Shopping cart">
-      <div class="cart-head"><div><small>OMEGA X</small><h2>Your Cart</h2></div><button id="closeCart">×</button></div>
+      <div class="cart-head">
+        <div>
+          <small>OMEGA X</small>
+          <h2>Your Cart</h2>
+        </div>
+        <button id="closeCart" aria-label="Close cart">×</button>
+      </div>
       <div class="cart-items" id="cartItems"></div>
       <div class="cart-bottom">
-        <label class="ack"><input type="checkbox" id="ackCheck" /> <span>I confirm these products are for qualified laboratory research use only and not for human or veterinary use.</span></label>
+        <label class="ack">
+          <input type="checkbox" id="ackCheck" />
+          <span>I confirm these products are for qualified laboratory research use only and not for human or veterinary use.</span>
+        </label>
         <div class="total-row"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
         <button class="checkout" id="checkoutBtn">Proceed to Checkout</button>
         <p>Payment gateway placeholder. Connect an approved processor later.</p>
@@ -137,12 +210,13 @@
 
   <div class="modal-backdrop" id="loginBackdrop" aria-hidden="true">
     <div class="login-modal">
-      <button id="closeLogin" class="close-x">×</button>
-      <p class="eyebrow red">Research account</p><h2>Login</h2>
+      <button id="closeLogin" class="close-x" aria-label="Close login">×</button>
+      <p class="eyebrow red">Research Account</p>
+      <h2>Login</h2>
       <input type="email" placeholder="Email address" />
       <input type="password" placeholder="Password" />
       <button class="primary full">Continue</button>
-      <p class="fineprint">Supabase/Clerk login can be connected here when ready.</p>
+      <p class="fineprint">Auth provider can be connected here when ready.</p>
     </div>
   </div>
 
