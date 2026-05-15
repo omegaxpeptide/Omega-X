@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OMEGA X PEPTIDE | Research Supply</title>
+  <meta name="description" content="OMEGA X PEPTIDE research-use-only catalog." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-alert">Research use only. Not for human or veterinary use.</div>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="OMEGA X PEPTIDE logo" />
+      <span>OMEGA X PEPTIDE</span>
+    </a>
+    <nav>
+      <a href="#catalog">Catalog</a>
+      <a href="#testing">Testing</a>
+      <a href="#faq">FAQ</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <button class="ghost" onclick="openAuth()">Login</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent research supply</p>
+        <h1>Premium research compounds with a clean, direct checkout experience.</h1>
+        <p class="hero-text">Browse the OMEGA X PEPTIDE catalog, review product details, and build your cart. All materials are offered for laboratory research use only.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#catalog">View Catalog</a>
+          <button class="secondary" onclick="openCart()">Open Cart</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="vial"><img src="assets/logo.png" alt="OMEGA X logo mark" /></div>
+        <h2>OMEGA X</h2>
+        <p>Secure packaging • clear labeling • support through Support@omegaxpeptide.com</p>
+      </div>
+    </section>
+
+    <section class="notice-card">
+      <strong>Compliance Notice:</strong> Products listed on this website are intended for qualified laboratory research only. They are not drugs, foods, cosmetics, or dietary supplements and are not intended to diagnose, treat, cure, or prevent disease.
+    </section>
+
+    <section id="catalog" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Public catalog</p>
+        <h2>Research Catalog</h2>
+        <p>Prices are placeholders for layout and can be updated when your final pricing is ready.</p>
+      </div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="Search catalog..." oninput="renderProducts()" />
+        <button class="ghost" onclick="openCart()">Cart <span id="cartCount">0</span></button>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="testing" class="section split">
+      <div>
+        <p class="eyebrow">Quality documentation</p>
+        <h2>Testing & COA-ready structure</h2>
+        <p>Built to support product-level testing documents later. You can add COA files, lot numbers, purity results, and storage notes to each product page when available.</p>
+      </div>
+      <div class="feature-list">
+        <div><strong>Lot tracking</strong><span>Placeholder fields ready for future batches.</span></div>
+        <div><strong>COA downloads</strong><span>Add PDF links later per product.</span></div>
+        <div><strong>Secure checkout</strong><span>Connect an approved payment processor when ready.</span></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <h2>FAQ</h2>
+      <details open><summary>Who can purchase?</summary><p>Only qualified purchasers using products for lawful laboratory research purposes.</p></details>
+      <details><summary>Are products for human use?</summary><p>No. Products are strictly research use only and are not for human or veterinary use.</p></details>
+      <details><summary>Can the logo be changed?</summary><p>Yes. Replace <code>assets/logo.png</code> and the entire site updates.</p></details>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>OMEGA X PEPTIDE</strong><p>Support@omegaxpeptide.com</p></div>
+    <div class="footer-links"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refunds</a></div>
+  </footer>
+
+  <div id="cartPanel" class="panel hidden">
+    <div class="panel-box">
+      <button class="close" onclick="closeCart()">×</button>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total">Total: <span id="cartTotal">$0.00</span></div>
+      <label class="checkbox"><input type="checkbox" id="ruoCheck" /> I confirm these products are for research use only and not for human or veterinary use.</label>
+      <button class="primary full" onclick="checkout()">Proceed to Checkout</button>
+      <p class="tiny">Payment gateway placeholder. Connect approved processor later.</p>
+    </div>
+  </div>
+
+  <div id="authPanel" class="panel hidden">
+    <div class="panel-box small">
+      <button class="close" onclick="closeAuth()">×</button>
+      <h2>Research Account</h2>
+      <input type="email" placeholder="Email address" />
+      <input type="password" placeholder="Password" />
+      <label class="checkbox"><input type="checkbox" /> I agree to the RUO terms.</label>
+      <button class="primary full">Sign Up / Login</button>
+      <p class="tiny">Supabase Auth placeholder. Add your project URL and anon key in <code>app.js</code>.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
